@@ -52,7 +52,7 @@
             border: 1px solid rgba(255,255,255,0.3);
         }
         .hero-contact a { color: #fff; display: flex; align-items: center; gap: 10px; }
-        .hero-contact a:hover { color: var(--accent-yellow); }
+        .hero-contact a:hover { color: var(--sweet-inner); }
 
         .hero .btn-cta {
             background-color: var(--primary-green);
@@ -215,8 +215,12 @@
         }
         .floating-call:hover { transform: scale(1.1); background-color: #219150; }
         
-        /* 푸터 */
-        footer { background: #333; color: #aaa; text-align: center; padding: 30px; font-size: 0.9rem; }
+        /* 푸터 (사업자 정보 수정) */
+        footer { background: #333; color: #aaa; text-align: center; padding: 40px 20px; font-size: 0.95rem; }
+        footer .biz-title { color: #fff; font-size: 1.1rem; margin-bottom: 15px; }
+        footer p { margin-bottom: 8px; }
+        footer span { margin: 0 5px; }
+        footer .copyright { margin-top: 20px; font-size: 0.8rem; opacity: 0.6; }
 
         /* 모바일 최적화 */
         @media (max-width: 768px) {
@@ -225,6 +229,10 @@
             .feature-grid { grid-template-columns: 1fr; }
             .special-content { flex-direction: column; text-align: center; }
             .sp-info-grid { justify-content: center; }
+            
+            /* 모바일에서 푸터 정보 줄바꿈 처리 */
+            footer span.divider { display: none; }
+            footer span { display: block; margin: 5px 0; }
         }
     </style>
 </head>
@@ -362,9 +370,14 @@
     </section>
 
     <footer>
-        <p><strong>소래산 주말농장</strong> | 인천광역시 남동구 장수동 32-5</p>
-        <p>문의: 010-5288-2683</p>
-        <p>Copyright © 2026 Soraesan Weekend Farm. All rights reserved.</p>
+        <p class="biz-title"><strong>소래산 자연농원</strong></p>
+        <p>
+            <span>대표자 : 정해용</span> <span class="divider">|</span> 
+            <span>사업자번호 : 602-36-65263</span> <span class="divider">|</span>
+            <span>문의 : 010-5288-2683</span>
+        </p>
+        <p>주소 : 인천광역시 남동구 장수동 32-5</p>
+        <p class="copyright">Copyright © 2026 Soraesan Weekend Farm. All rights reserved.</p>
     </footer>
 
     <a href="tel:01052882683" class="floating-call" title="전화 문의하기">📞</a>
